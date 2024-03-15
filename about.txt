@@ -1,0 +1,22 @@
+HTML:
+-boilerplate with tite and links to sylesheet
+-Body with a title and instuctions to enter numbers. 
+-Form with an onsubmit property which calls the calculate function. Labels for the various inputs and a submit button which will run the calculate logic. 
+-Results div for the various math operations
+-script linking to the js logic
+
+CSS:
+-basic styling for the body, submit button, input field 
+
+JS:
+-getMean function takes an array and uses reduce to start at the beginning of the array (index 0) and loop through. The acc (actuator) gets modified by the element every time the loop runs.
+-getMedian function accepts an array and sorts it. It uses .slice() with nothing passed in to create a copy. The sort logic a - b sorts from low to high. It checks if the array is an even or odd length then calculates the median appropriately depending on that. 
+-getMode function creates an empty object, then starts filling it using forEach. 
+-getRange fucntion uses Math.max and Math.min on copies of the passed in array crated using the spread operator. Then calculates the difference between the two which is the range. 
+-getVariance takes an array and assigns the mean of the array to a variable. Uses reduce on the array to calculate a differnce and square it then add those values to the acutator as it loops though. This is divided by the length of the array to get variance. 
+-getStandardDeviation takes an array and calculates the variance of that array. It uses a Math function to calculate the squareroot of this variace which is the standardDev
+
+The calculate function grabs values out of the dom. It does something with split and regular expressions (freshen up knowledge on regex)
+-It uses map to create a new array of the elements entered as strings converted to numbers. 
+-It grabs all the values for the entered numbers by running the above funciton son it. 
+-Uses queryselctor and text content to display the results. 
